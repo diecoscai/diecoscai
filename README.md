@@ -2,9 +2,9 @@
 
 # Diego Costa
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=6366F1&center=true&vCenter=true&width=500&lines=Full+Stack+Developer;AI+Engineer;Building+with+LLMs+%26+agents)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=6366F1&center=true&vCenter=true&width=520&lines=AI+Engineer;Products+with+an+LLM+inside;The+model+is+rarely+the+hard+part)](https://git.io/typing-svg)
 
-📍 Montevideo, Uruguay &nbsp;|&nbsp; 🤖 Building AI-powered products &nbsp;|&nbsp; 📦 Open source contributor
+📍 Montevideo, Uruguay · UTC-3 &nbsp;|&nbsp; 🤖 Products with an LLM inside &nbsp;|&nbsp; 📦 [diegocosta.dev](https://diegocosta.dev)
 
 </div>
 
@@ -12,66 +12,43 @@
 
 ## About
 
-Full Stack Developer with hands-on experience building and shipping production AI systems. I've worked on multi-tenant SaaS platforms powered by LLMs, enterprise agent infrastructure with 140+ integrations, and data pipelines that process thousands of documents through AI analysis.
+AI Engineer. Since mid-2025 I build products with an LLM inside, full time — an agent orchestration platform, a construction-bidding product, and an internal desktop app, all in the same engagement. The model is rarely the hard part. The hard part is everything around it: grounding an assistant so a user can check the answer instead of trusting it, keeping each client's documents inside their own tenant, and being able to tell what the thing actually did at 3am.
 
-I care about code that works in production under real constraints — not just demos.
-
-Currently exploring: MCP servers, LangGraph, and agentic workflows.
+Before software, six years in ad operations — where I automated my own job until automating became the job.
 
 ---
 
-## Tech Stack
+## What I've shipped
 
-**Languages** — TypeScript · JavaScript · Ruby · Python
+**Grounded the assistant, and closed the tenant gap** — On [AnswerAgent](https://github.com/the-answerai/theanswer) I found a five-second timeout that was a no-op because the MCP subprocess never inherited its env, batched an unindexed vectorstore lookup that ran once per document, and closed a multi-tenancy hole where document chunks were written with no owner id so tenant filters matched nothing. [My merged PRs →](https://github.com/the-answerai/theanswer/pulls?q=is%3Apr+author%3Adiecoscai+is%3Amerged)
 
-**Frontend** — React · Next.js · React Native · Tailwind CSS · Vite
+**Wrote the manual, built the tool that answers from it** — On a construction-bidding product I documented all eight workflows screen by screen, checked against the code, then built the tool that answers "how do I do X" with a link to the exact section — and says the manual doesn't cover it instead of inventing UI.
 
-**Backend** — Node.js · Express · Ruby on Rails · AWS Lambda
-
-**AI & LLMs** — LangChain · Claude API · OpenAI · AWS Bedrock · pgvector · Langfuse
-
-**Infrastructure** — AWS (Fargate, Lambda, DynamoDB, KMS, S3) · Docker · Auth0 · Stripe
-
-**Databases** — PostgreSQL · Redis · Supabase
-
-**Testing** — Vitest · Playwright · RSpec · Jest
+**Kept a desktop product shipping** — Fixed macOS notarization on signed builds, split the auto-update manifest so arm64 users stopped updating into the wrong binary, and built the production monitoring that never existed (CloudWatch alarms had sat in `INSUFFICIENT_DATA` for a month because nothing emitted metrics).
 
 ---
 
-## Featured Projects
+## Featured open source
 
-### 🔧 [`hevy-mcp`](https://github.com/diecoscai/hevy-mcp) — MCP Server for Hevy
-TypeScript MCP server that exposes 22 tools for managing workouts, routines, exercises, and body measurements from any MCP-compatible client. Features Zod validation, in-memory TTL cache with prefix invalidation, write safety by default (dry-run mode), and full test coverage.
+### 🔧 [`hevy-mcp`](https://github.com/diecoscai/hevy-mcp) — MCP server for the Hevy fitness API
+A public, CI-backed MCP server exposing the Hevy API as **23 strongly-typed tools** over stdio for Claude Desktop, Cursor and VS Code. Zod edge-validation with self-correcting errors, dry-run-by-default writes, and schemas auto-generated from Hevy's OpenAPI spec via a weekly workflow that opens PRs on drift.
 
-`TypeScript` `Zod` `Vitest` `GitHub Actions` `npm`
-
----
-
-### 💼 Production Work (private repos)
-
-| Project | What I built | Stack |
-|---------|-------------|-------|
-| AI SaaS Platform | Multi-tenant LLM platform with Auth0, billing, and LangChain pipelines. Fixed production OOM crashes via streaming loaders + keyset pagination. Mitigated a CVE in MCP stdio handling. | Node.js · TypeScript · PostgreSQL · AWS Fargate · Auth0 · Langfuse |
-| Agent Infrastructure | Dashboard + onboarding system for a managed AI agent platform. Built Playwright E2E suite with visual regression (mobile + desktop). Wrote Lambda integration tests with AWS SDK mocking. | React · TypeScript · AWS Lambda · DynamoDB · Playwright |
-| Browser Extension | Chrome/Firefox extension with sidepanel AI chatbot. Built the adaptive light/dark theme system and fixed Auth0 session handling across org switches. | WXT · React · TypeScript · Auth0 |
-| Data Pipeline | Call analytics platform with Twilio + Whisper transcription and LLM-powered tagging. | Node.js · Express · OpenAI · Supabase · BullMQ |
+`TypeScript` · `Zod` · `Vitest` · `GitHub Actions (OIDC)` · `npm`
 
 ---
 
-## GitHub Stats
+## Stack
 
-<div align="center">
+**Every day** — TypeScript · Node.js · React · PostgreSQL · MCP · RAG · Flowise · Langfuse · Fiddler · AWS
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=diecoscai&layout=compact&theme=tokyonight&hide_border=true&langs_count=8)
+**Shipped with** — Electron · Docker · Playwright · Vitest · GitHub Actions · Angular · Azure
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=diecoscai&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true)
-
-</div>
+**Earlier** — Ruby on Rails · Python
 
 ---
 
 ## Contact
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Diego%20Costa-6366F1?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/diegocosta)
+[![Portfolio](https://img.shields.io/badge/Portfolio-diegocosta.dev-6366F1?style=flat&logo=astro&logoColor=white)](https://diegocosta.dev)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Diego%20Costa-6366F1?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/diecoscai)
 [![Email](https://img.shields.io/badge/Email-diecoscai@gmail.com-6366F1?style=flat&logo=gmail&logoColor=white)](mailto:diecoscai@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Ver%20proyectos-6366F1?style=flat&logo=github&logoColor=white)](https://github.com/diecoscai/portfolio)
